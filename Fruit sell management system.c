@@ -11,7 +11,7 @@ int main() {
     int MenuOption;
 
     /* here enter your option here*/
-    printf("Enter your option: ");
+    printf(" 1)Mango\n 2)Apple\n 3)Butterfruit\n 4)Strawberry\n 5)Litchi\n Enter your option:");
     scanf("%d", &MenuOption);
 
     /* if you select option 1 to 5 it select options anyone which option you sleected */
