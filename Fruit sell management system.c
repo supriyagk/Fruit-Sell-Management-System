@@ -13,26 +13,26 @@ int main()
     // if case 1 selected order confirmed for Mango and rest follows same ;
     case 1:
         printf("Mango");
-        printf(" Chosen Successfully\n");
+        printf(" Chosen Successfully.\n");
         break;
     case 2:
         printf("Apple");
-         printf(" Chosen Successfully\n");
+         printf(" Chosen Successfully.\n");
         break;
     case 3:
         printf("Butterfruit");
-         printf(" Chosen Successfully\n");
+         printf(" Chosen Successfully.\n");
         break;
     case 4:
         printf("Strawberry");
-         printf(" Chosen Successfully\n");
+         printf(" Chosen Successfully.\n");
         break;
     case 5:
         printf("Litchi");
-         printf(" Chosen Successfully\n");
+         printf(" Chosen Successfully.\n");
         break;
      case 6:
-        printf("Exiting program\n");
+        printf("Thank you visit again.\n");
         return 0; // Exit the program
      //In case if you choose option 7 it shows invalid option;
     case 7:
@@ -46,7 +46,7 @@ int main()
                 printf("Enter a valid option\n");
                 printf("Choosing Fruits Failed\n");
         }
-    } while (MenuOption < 1 || MenuOption > 4); // Loop until a valid option is entered
+    } while (MenuOption < 1 || MenuOption > 6); // Loop until a valid option is entered
 
     return 0;
 }
