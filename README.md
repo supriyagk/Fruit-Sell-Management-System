@@ -1,4 +1,4 @@
-# Organic Fruit Booking System
+# Organic Fruit Ordering System
 The Organic Fruit Shop is a software solution designed to streamline the process of ordering fruits from a virtual fruit shop. With a user-friendly interface and intuitive features, this program offers a convenient way for customers to select and purchase their favorite fruits.
 # Table of Content
 - [Introduction](#introduction)
