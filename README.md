@@ -1,4 +1,4 @@
-# Organic Fruit Shop Ticket Booking System
+# Organic Fruit Booking System
 
 The Organic Fruit Shop is a software solution designed to streamline the process of ordering fruits from a virtual fruit shop. With a user-friendly interface and intuitive features, this program offers a convenient way for customers to select and purchase their favorite fruits.
 
