@@ -1,6 +1,27 @@
 #include <stdio.h>
 #include <string.h>
-#include "fruit.h"
+
+// Structure to represent a fruit order
+struct FruitOrder {
+    char fruitName[20];
+    float quantity;
+    char unit[5];
+};
+
+// Function to handle fruit ordering
+void orderFruit(const char *fruit, float *quantity, const char *unit) {
+    printf("Enter quantity for %s per %s: ", fruit, unit);
+    scanf("%f", quantity);
+    printf("%s (%.2f %s) Chosen Successfully.\n", fruit, *quantity, unit);
+}
+
+// Function to display the menu and get user's choice
+int getMenuOption() {
+    int option;
+    printf("Welcome To Organic Fruit Shop\n Menu:\n 1) Mango\n 2) Apple\n 3) Butterfruit\n 4) Strawberry\n 5) Litchi\n 6) exit\n enter your option: ");
+    scanf("%d", &option);
+    return option;
+}
 
 int main() {
     int MenuOption;
