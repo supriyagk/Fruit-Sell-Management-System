@@ -7,7 +7,8 @@
 #include "processPayment.c"
 
 
-int main() {
+int main()
+{
     int MenuOption;
     struct FruitOrder order;
     float totalPrice;

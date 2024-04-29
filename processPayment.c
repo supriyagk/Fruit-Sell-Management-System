@@ -1,7 +1,8 @@
 #include "FruitOrder.h"
 
 // Function to process payment
-void processPayment(float totalPrice) {
+void processPayment(float totalPrice)
+{
     int paymentMode;
     printf("Total Price: %.2f Rupees\n", totalPrice);
     printf("Select Payment Mode:\n 1) Cash\n 2) Card\n");
