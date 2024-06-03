@@ -1,20 +1,25 @@
+#include <stdio.h>
 #include "FruitOrder.h"
 
-// Function to process payment
-void processPayment(float totalPrice)
+void processPayment(float totalPrice, enum PaymentMethod paymentMethod)
 {
-    int paymentMode;
-    printf("Total Price: %.2f Rupees\n", totalPrice);
-    printf("Select Payment Mode:\n 1) Cash\n 2) Card\n");
-    scanf("%d", &paymentMode);
-    switch (paymentMode) {
-        case 1:
-            printf("Payment Successful.\n Thank you! Visit again.\n");
+    const char *method;
+    switch (paymentMethod)
+    {
+        case CASH:
+            method = "Cash";
             break;
-        case 2:
-            printf("Card Payment Successful.\n Thank you! Visit again.\n");
+        case CARD:
+            method = "Card";
+            break;
+        case DIGITAL_WALLET:
+            method = "Digital Wallet";
             break;
         default:
-            printf("Invalid Payment Mode. Payment Failed.\n");
+            method = "Invalid Payment Method";
+            break;
     }
+    printf("Total Price: %.2f Rupees\n", totalPrice);
+    printf("Payment of %.2f Rupees using %s processed successfully.\n", totalPrice, method);
+    printf("Thank you.\n");
 }

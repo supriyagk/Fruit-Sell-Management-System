@@ -1,24 +1,27 @@
 #ifndef FRUITORDER_H
 #define FRUITORDER_H
 
-// Structure to represent a fruit order
-struct FruitOrder {
+struct FruitOrder
+{
     char fruitName[20];
-    float quantity;
-    char unit[5];
+    char unit[10];
     float pricePerUnit;
+    float quantity;
 };
 
-// Function to handle fruit ordering
-void orderFruit(struct FruitOrder *order);
+enum PaymentMethod
+{
+    CASH,
+    CARD,
+    DIGITAL_WALLET,
+    INVALID_PAYMENT
+};
 
-// Function to calculate total price
-float calculateTotalPrice(struct FruitOrder *order);
-
-// Function to display the menu and get user's choice
 int getMenuOption();
-
-// Function to process payment
-void processPayment(float totalPrice);
+void orderFruit(struct FruitOrder *order);
+float calculateTotalPrice(struct FruitOrder *order);
+void processPayment(float totalPrice, enum PaymentMethod paymentMethod);
+enum PaymentMethod getPaymentMethod();
+int validatePayment(enum PaymentMethod paymentMethod);
 
 #endif // FRUITORDER_H
