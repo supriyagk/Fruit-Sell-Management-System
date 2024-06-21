@@ -5,6 +5,11 @@ The Organic Fruit Ordering System is a software solution designed to streamline 
 ## Table of Contents
 - [Introduction](#introduction)
 - [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Code Structure](#code-structure)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Introduction
 In today's fast-paced world, convenience is key. The Organic Fruit Ordering System caters to this need by providing a digital platform where users can explore a variety of fruits and place orders with ease. Whether it's a juicy Mango, a crisp Apple, or a succulent Strawberry, the Organic Fruit Ordering System has it all.
@@ -20,8 +25,7 @@ In today's fast-paced world, convenience is key. The Organic Fruit Ordering Syst
 - **Order History**: The program saves order history to a file and displays it to the user.
 - **Order Sorting**: The order history can be sorted by total price.
 
-
-##Code Structure
+## Code Structure
 - **main.c**: The main entry point of the program, containing the main loop and core logic.
 - **orderFruit.c**: Contains the function to handle the ordering of fruits.
 - **calculateTotalPrice.c**: Contains the function to calculate the total price of the order.
@@ -30,4 +34,6 @@ In today's fast-paced world, convenience is key. The Organic Fruit Ordering Syst
 - **validatePayment.c**: Contains the function to validate the chosen payment method.
 - **processPayment.c**: Contains the function to process the payment.
 - **FruitOrder.h**: Header file defining the `FruitOrder` structure and the `PaymentMethod` enumeration.
+
+
 
