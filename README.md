@@ -5,11 +5,7 @@ The Organic Fruit Ordering System is a software solution designed to streamline 
 ## Table of Contents
 - [Introduction](#introduction)
 - [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
 - [Code Structure](#code-structure)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 In today's fast-paced world, convenience is key. The Organic Fruit Ordering System caters to this need by providing a digital platform where users can explore a variety of fruits and place orders with ease. Whether it's a juicy Mango, a crisp Apple, or a succulent Strawberry, the Organic Fruit Ordering System has it all.
