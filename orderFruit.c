@@ -1,11 +1,9 @@
-#include <stdio.h>
 #include "FruitOrder.h"
 
 void orderFruit(struct FruitOrder* order) {
-    printf("Enter quantity in %s: ", order->unit);
-    if (scanf("%f", &order->quantity) != 1) {
-        printf("Invalid input. Please enter a valid number.\n");
-        order->quantity = 0; // Reset the quantity to avoid incorrect calculation
-        while (getchar() != '\n'); // Clear the input buffer
+    printf("Enter quantity of %s (%s): ", order->fruitName, order->unit);
+    while (scanf("%f", &order->quantity) != 1 || order->quantity <= 0) {
+        printf("Invalid quantity. Enter a positive number.\n");
+        while (getchar() != '\n'); // Clear invalid input
     }
 }

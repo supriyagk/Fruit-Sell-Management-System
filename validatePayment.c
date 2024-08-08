@@ -1,5 +1,5 @@
 #include "FruitOrder.h"
 
 int validatePayment(enum PaymentMethod method) {
-    return method != INVALID;
+    return method >= CASH && method <= UPI;
 }

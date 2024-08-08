@@ -1,23 +1,11 @@
-#include <stdio.h>
 #include "FruitOrder.h"
 
 enum PaymentMethod getPaymentMethod() {
     int option;
-    printf("\nPayment Methods:\n");
-    printf("1. Cash\n");
-    printf("2. Card\n");
-    printf("3. UPI\n");
-    printf("Enter your payment method: ");
-    if (scanf("%d", &option) != 1) {
-        printf("Invalid input. Please enter a valid number.\n");
-        while (getchar() != '\n'); // Clear the buffer
-        return INVALID;
+    printf("\nSelect payment method:\n1. Cash\n2. Card\n3. UPI\n");
+    while (scanf("%d", &option) != 1 || option < 1 || option > 3) {
+        printf("Invalid payment method. Select 1, 2, or 3.\n");
+        while (getchar() != '\n'); // Clear invalid input
     }
-
-    switch (option) {
-        case 1: return CASH;
-        case 2: return CARD;
-        case 3: return UPI;
-        default: return INVALID;
-    }
+    return option - 1;
 }
