@@ -1,11 +1,14 @@
-#include "FruitOrder.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>  // Include this for strcpy
+#include "functions.h"
 
 struct FruitOrder orders[MAX_ORDERS];
 int orderCount = 0;
 
 int main() {
     int menuOption;
-    struct FruitOrder *order = malloc(sizeof(struct FruitOrder));
+    struct FruitOrder* order = malloc(sizeof(struct FruitOrder));
     float totalPrice;
     enum PaymentMethod paymentMethod;
 
@@ -68,9 +71,14 @@ int main() {
                 free(order);
                 return 0;
             default:
-                printf("Invalid option.\n");
-                printf("Enter a valid option.\n");
+                printf("Invalid option. Enter a valid option.\n");
                 continue;
+        }
+
+        // Validate pricePerUnit and quantity
+        if (order->pricePerUnit <= 0 || order->quantity <= 0) {
+            printf("Invalid price or quantity.\n");
+            continue;
         }
 
         // Calculate the total price

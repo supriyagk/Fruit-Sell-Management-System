@@ -1,21 +1,20 @@
-#ifndef FRUITORDER_H
-#define FRUITORDER_H
+#ifndef FUNCTIONS_H
+#define FUNCTIONS_H
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#define MAX_ORDERS 100
+#define MAX_INPUT 100
 
-// Enums and structs
+// Enum for payment methods
 enum PaymentMethod {
     CASH,
     CARD,
-    UPI,
-    INVALID
+    UPI
 };
 
+// Structure for fruit order
 struct FruitOrder {
-    char fruitName[50];
-    char unit[10];
+    char fruitName[MAX_INPUT];
+    char unit[MAX_INPUT];
     float pricePerUnit;
     float quantity;
 };
@@ -32,12 +31,7 @@ void generateBill(struct FruitOrder* order, float totalPrice, enum PaymentMethod
 void displayOrderHistory();
 void sortOrderHistory();
 
-// Constants
-#define MAX_ORDERS 100
-#define MAX_INPUT 100
-
-// Global variables
 extern struct FruitOrder orders[MAX_ORDERS];
 extern int orderCount;
 
-#endif // FRUITORDER_H
+#endif // FUNCTIONS_H
